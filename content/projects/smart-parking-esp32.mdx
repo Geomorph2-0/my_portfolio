@@ -1,26 +1,36 @@
 ---
 title: "Smart Parking Lot System"
-description: "An automated parking ecosystem built on ESP32 that manages occupancy data in real-time via IoT protocols."
+description: "An automated parking ecosystem built on ESP32 that manages occupancy data in real-time via IoT protocols, with a physical prototype built from scratch."
 tags: ["Firmware", "System"]
 date: "2024-06-01"
+image: "/projects/smart-parking/overview.jpg"
+gallery:
+  - src: "/projects/smart-parking/overview.jpg"
+    alt: "Top-down view of the parking lot prototype with servo-controlled barriers and ESP32 electronics"
+  - src: "/projects/smart-parking/side-view.jpg"
+    alt: "Side view of the full prototype with the monitoring laptop and wiring"
+  - src: "/projects/smart-parking/full-setup.jpg"
+    alt: "Full setup showing the multi-level parking structure and control system"
 ---
 
 ## Overview
 
-A smart parking management system designed and simulated using the ESP32 microcontroller. The system tracks parking bay occupancy in real-time and exposes the data over IoT protocols for remote monitoring.
+A smart parking management system designed, built, and tested end-to-end using the ESP32 microcontroller. The system tracks parking bay occupancy in real-time and exposes the data over IoT protocols for remote monitoring — with a fully hand-built physical prototype to validate the design.
 
 ## Problem
 
-Manual parking management is inefficient and doesn't scale. The goal was to design an automated system that could detect occupancy, process that data on-device, and publish it for remote consumption — all on low-cost hardware.
+Manual parking management is inefficient and doesn't scale. The goal was to design an automated system that could detect occupancy, process that data on-device, and publish it for remote consumption — all on low-cost, readily available hardware.
 
 ## Implementation
 
 - **Microcontroller**: ESP32 running ESP-IDF
-- **Occupancy sensing**: IR sensors per parking bay, debounced in firmware
+- **Occupancy sensing**: Ultrasonic (HC-SR04) sensors per parking bay, debounced in firmware
+- **Entry/exit control**: Servo motors acting as automated barriers at entry and exit points
+- **Indicators**: Red/green LEDs per bay showing occupancy status at a glance
 - **IoT communication**: MQTT protocol for lightweight real-time data publishing
-- **Power optimization**: Deep sleep modes between sensor polling intervals to reduce consumption
-- **Simulation**: Full system simulated and validated before hardware prototyping
+- **Alert system**: Buzzer for entry/exit events
+- **Prototype**: Fully hand-built cardboard model with painted road markings, servo barriers, breadboard electronics, and a working wiring harness
 
 ## Outcome
 
-The simulation demonstrated accurate occupancy tracking with optimized power consumption and reliable sensor readings. The architecture is designed to scale to multi-level parking facilities with a central MQTT broker aggregating data from multiple ESP32 nodes.
+The prototype demonstrated accurate real-time occupancy tracking across all three bays, with servo barriers responding correctly to vehicle detection. The architecture is designed to scale to multi-level facilities with a central MQTT broker aggregating data from multiple ESP32 nodes.

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, GitFork, Calendar } from "lucide-react";
+import ProjectGallery from "@/components/ProjectGallery";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -89,6 +90,15 @@ export default async function ProjectPage({
       <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-[var(--accent)] prose-code:font-mono prose-pre:bg-[var(--card)] prose-pre:border prose-pre:border-[var(--border)]">
         <MDXRemote source={content} />
       </article>
+
+      {f.gallery && f.gallery.length > 0 && (
+        <div className="mt-12 border-t border-[var(--border)] pt-10">
+          <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-widest mb-4">
+            Gallery
+          </p>
+          <ProjectGallery images={f.gallery} />
+        </div>
+      )}
     </div>
   );
 }

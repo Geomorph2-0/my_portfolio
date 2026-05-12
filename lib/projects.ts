@@ -4,11 +4,14 @@ import matter from "gray-matter";
 
 const PROJECTS_DIR = path.join(process.cwd(), "content/projects");
 
+export type GalleryImage = { src: string; alt: string };
+
 export type ProjectFrontmatter = {
   title: string;
   description: string;
   tags: string[];
   image?: string;
+  gallery?: GalleryImage[];
   github?: string;
   date: string;
   featured?: boolean;
