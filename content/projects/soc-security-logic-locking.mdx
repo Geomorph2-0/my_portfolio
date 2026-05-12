@@ -1,0 +1,25 @@
+---
+title: "SoC Security: Logic Locking"
+description: "A technical research project evaluating Logic Locking techniques to protect IP in Systems-on-Chip against piracy and reverse engineering."
+tags: ["System", "Research"]
+date: "2025-03-01"
+---
+
+## Overview
+
+An ongoing research project investigating Logic Locking as a hardware security mechanism for protecting Intellectual Property (IP) embedded in Systems-on-Chip (SoC). The work involves both a literature review and hands-on simulation in Vivado.
+
+## Problem
+
+As chip design increasingly happens across distributed supply chains, protecting proprietary logic from piracy and reverse engineering has become critical. Logic Locking is a technique that obfuscates circuit functionality until a correct key is applied — but its robustness varies significantly by implementation.
+
+## Implementation
+
+- **Literature review**: Surveying foundational and state-of-the-art Logic Locking schemes (random, SARLock, Strong Logic Locking, etc.)
+- **Simulation**: Implementing locking mechanisms on test netlists in Xilinx Vivado
+- **Evaluation**: Assessing resilience against SAT-based attacks and other known attack vectors
+- **Comparison**: Benchmarking area, power, and security overhead across different locking strategies
+
+## Current Status
+
+Research is in progress. Simulations are running on synthesizable VHDL designs in Vivado. The goal is to produce a technical report evaluating which locking strategies offer the best balance of security and hardware overhead for practical SoC integration.

@@ -1,0 +1,26 @@
+---
+title: "Smart Parking Lot System"
+description: "An automated parking ecosystem built on ESP32 that manages occupancy data in real-time via IoT protocols."
+tags: ["Firmware", "System"]
+date: "2024-06-01"
+---
+
+## Overview
+
+A smart parking management system designed and simulated using the ESP32 microcontroller. The system tracks parking bay occupancy in real-time and exposes the data over IoT protocols for remote monitoring.
+
+## Problem
+
+Manual parking management is inefficient and doesn't scale. The goal was to design an automated system that could detect occupancy, process that data on-device, and publish it for remote consumption — all on low-cost hardware.
+
+## Implementation
+
+- **Microcontroller**: ESP32 running ESP-IDF
+- **Occupancy sensing**: IR sensors per parking bay, debounced in firmware
+- **IoT communication**: MQTT protocol for lightweight real-time data publishing
+- **Power optimization**: Deep sleep modes between sensor polling intervals to reduce consumption
+- **Simulation**: Full system simulated and validated before hardware prototyping
+
+## Outcome
+
+The simulation demonstrated accurate occupancy tracking with optimized power consumption and reliable sensor readings. The architecture is designed to scale to multi-level parking facilities with a central MQTT broker aggregating data from multiple ESP32 nodes.

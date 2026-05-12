@@ -1,0 +1,39 @@
+---
+title: "UAV Flight Controller"
+description: "A custom flight controller for UAV systems built on STM32, supporting brushed and brushless motors with PID control and sensor fusion."
+tags: ["Firmware", "PCB", "System"]
+date: "2025-01-01"
+featured: true
+---
+
+## Overview
+
+A custom-designed flight controller architected from the ground up to support both brushed and brushless motor configurations. This is my final year project at Redeemer's University, targeting a complete alternative to off-the-shelf flight controllers like Betaflight/Pixhawk.
+
+## Problem
+
+Commercial flight controllers are black boxes — highly capable but opaque. The goal was to build something I fully understand at every layer of the stack: from the PCB traces and motor drivers to the PID tuning logic and telemetry dashboard.
+
+## Implementation
+
+**Firmware**
+- Developed in C using STM32Cube Suite and C++ via PlatformIO
+- PID control loops for roll, pitch, and yaw stabilization
+- Sensor fusion algorithms combining gyroscope and accelerometer data for real-time attitude estimation
+- Motor mixing algorithms for quadcopter geometry
+
+**Hardware**
+- Custom PCB designed in KiCad
+- STM32 microcontroller at the core
+- ESC signal output for brushless motor control (PWM / DSHOT)
+- IMU integration (accelerometer + gyroscope)
+
+**Additional Features (In Progress)**
+- Telemetry viewing via a web-based dashboard
+- Remote control via Wi-Fi and cellular networks
+- Support for standard RC transmitter input
+- Waypoint mapping and autonomous flight modes
+
+## Outcome
+
+The controller is currently in active development and is being evaluated on a custom-built quadcopter frame alongside a custom Power Distribution Board (PDB). Performance is being benchmarked against industry-standard flight controllers.
