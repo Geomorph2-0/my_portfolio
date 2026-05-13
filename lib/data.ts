@@ -24,31 +24,39 @@ export const experience = [
     period: "Sep 2025 – Present",
     role: "Vice President",
     org: "Redeemer's University Technology Space",
-    description:
-      "Leading technical initiatives and community building at the university's technology hub, driving hardware and embedded systems projects.",
+    description: [
+      "Lead technical initiatives and community building at the university's technology hub",
+      "Spearheaded TechFest 5.0 — the community's annual event themed 'Create, Code and Culture'",
+    ],
   },
   {
     period: "Aug 2025 – Sep 2025",
     role: "Network Intern",
     org: "MTN Nigeria",
-    description:
-      "Assisted in monitoring network infrastructure and troubleshooting telecommunications hardware. Carried out site audits as part of maintenance and troubleshooting activities.",
+    description: [
+      "Monitored network infrastructure and troubleshot telecommunications hardware",
+      "Conducted site audits as part of routine maintenance and troubleshooting activities",
+    ],
   },
   {
     period: "Apr 2025 – Jul 2025",
     role: "Hardware Engineering Intern",
     org: "Constantlink Technologies Limited",
-    description:
-      "Diagnosed and repaired complex PCB-level issues for smartphones (Samsung, Infinix, Oppo). Engineered solar power solutions including load calculation and panel/inverter installation. Maintained industrial-grade hardware including inverters, UPS systems, and printers.",
+    description: [
+      "Diagnosed and repaired PCB-level faults across major smartphone brands (Samsung, Infinix, Oppo, Tecno, iPhone, Itel, Redmi, Huawei, Gionee)",
+      "Engineered solar power solutions including load calculation and panel/inverter installation",
+      "Maintained industrial-grade hardware including inverters, UPS systems, and printers",
+    ],
   },
 ];
 
 export const education = [
   {
-    period: "Oct 2021 – Oct 2026 ",
+    period: "Oct 2021 – Oct 2026 (Expected)",
     role: "B.Eng. Computer Engineering",
     org: "Redeemer's University",
-    description:
-      "Key Coursework: Computer Architecture, Microprocessor Systems, Digital Logic Design, Embedded Systems, Control Systems, Cryptography Principles and Applications.",
+    description: [
+      "Key Coursework: Computer Architecture, Microprocessor Systems, Digital Logic Design, Embedded Systems, Control Systems, Cryptography Principles and Applications",
+    ],
   },
 ];

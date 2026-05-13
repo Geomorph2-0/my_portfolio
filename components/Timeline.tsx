@@ -6,7 +6,7 @@ type Entry = {
   period: string;
   role: string;
   org: string;
-  description: string;
+  description: string[];
 };
 
 export default function Timeline({ entries }: { entries: Entry[] }) {
@@ -31,9 +31,13 @@ export default function Timeline({ entries }: { entries: Entry[] }) {
               {entry.role}{" "}
               <span className="text-accent">· {entry.org}</span>
             </p>
-            <p className="text-sm text-(--muted) mt-1 leading-relaxed">
-              {entry.description}
-            </p>
+            <ul className="mt-2 space-y-1 list-disc list-inside">
+              {entry.description.map((item, j) => (
+                <li key={j} className="text-sm text-(--muted) leading-relaxed">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>
