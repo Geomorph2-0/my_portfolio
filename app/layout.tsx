@@ -43,7 +43,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Nav />
           <main className="flex-1">{children}</main>
-          <footer className="border-t border-[var(--border)] py-8 text-center text-sm text-[var(--muted)]">
+          <footer className="border-t border-(--border) py-8 text-center text-sm text-(--muted)">
             <p>Built with Next.js · Designed with intent</p>
           </footer>
         </ThemeProvider>

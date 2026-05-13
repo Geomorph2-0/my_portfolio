@@ -15,11 +15,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="group rounded-xl border border-[var(--border)] bg-[var(--card)] overflow-hidden hover:border-[var(--accent)] transition-colors"
+      className="group rounded-xl border border-(--border) bg-(--card) overflow-hidden hover:border-accent transition-colors"
     >
       {f.image && (
         <Link href={`/projects/${slug}`}>
-          <div className="relative h-48 w-full overflow-hidden bg-[var(--border)]">
+          <div className="relative h-48 w-full overflow-hidden bg-(--border)">
             <Image
               src={f.image}
               alt={f.title}
@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {f.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-full text-xs font-mono bg-[var(--border)] text-[var(--muted)]"
+              className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--border) text-(--muted)"
             >
               {tag}
             </span>
@@ -43,18 +43,18 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <Link href={`/projects/${slug}`}>
-          <h3 className="font-semibold text-[var(--foreground)] mb-1 group-hover:text-[var(--accent)] transition-colors">
+          <h3 className="font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
             {f.title}
           </h3>
         </Link>
-        <p className="text-sm text-[var(--muted)] leading-relaxed line-clamp-2 mb-4">
+        <p className="text-sm text-(--muted) leading-relaxed line-clamp-2 mb-4">
           {f.description}
         </p>
 
         <div className="flex items-center gap-3">
           <Link
             href={`/projects/${slug}`}
-            className="inline-flex items-center gap-1 text-xs text-[var(--accent)] font-medium hover:underline underline-offset-4"
+            className="inline-flex items-center gap-1 text-xs text-accent font-medium hover:underline underline-offset-4"
           >
             Read more <ArrowUpRight size={12} />
           </Link>
@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={f.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+              className="inline-flex items-center gap-1 text-xs text-(--muted) hover:text-foreground transition-colors"
             >
               <GitFork size={13} /> GitHub
             </a>

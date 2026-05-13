@@ -22,8 +22,8 @@ export default function ProjectFilter({ projects }: { projects: Project[] }) {
           onClick={() => setActive(null)}
           className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
             active === null
-              ? "bg-[var(--accent)] text-white"
-              : "bg-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)]"
+              ? "bg-accent text-white"
+              : "bg-(--border) text-(--muted) hover:text-foreground"
           }`}
         >
           All
@@ -34,8 +34,8 @@ export default function ProjectFilter({ projects }: { projects: Project[] }) {
             onClick={() => setActive(tag === active ? null : tag)}
             className={`px-3 py-1.5 rounded-full text-sm font-mono transition-colors ${
               active === tag
-                ? "bg-[var(--accent)] text-white"
-                : "bg-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)]"
+                ? "bg-accent text-white"
+                : "bg-(--border) text-(--muted) hover:text-foreground"
             }`}
           >
             {tag}
@@ -44,7 +44,7 @@ export default function ProjectFilter({ projects }: { projects: Project[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-[var(--muted)] text-sm">No projects match this filter.</p>
+        <p className="text-(--muted) text-sm">No projects match this filter.</p>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((project) => (

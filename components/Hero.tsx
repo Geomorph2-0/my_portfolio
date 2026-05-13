@@ -16,7 +16,7 @@ export default function Hero() {
         <motion.p
           {...baseAnim}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-mono text-sm text-[var(--accent)] mb-4 tracking-wide"
+          className="font-mono text-sm text-accent mb-4 tracking-wide"
         >
           Hardware Engineer · Embedded Systems Developer
         </motion.p>
@@ -28,13 +28,13 @@ export default function Hero() {
         >
           Joseph Kehinde,
           <br />
-          <span className="text-[var(--accent)]">Bolujo.</span>
+          <span className="text-accent">Bolujo.</span>
         </motion.h1>
 
         <motion.p
           {...baseAnim}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="text-lg md:text-xl text-[var(--muted)] max-w-2xl leading-relaxed mb-10"
+          className="text-lg md:text-xl text-(--muted) max-w-2xl leading-relaxed mb-10"
         >
           Computer Engineering student specializing in embedded systems and UAV
           architecture. I design flight controllers from the ground up —
@@ -49,13 +49,13 @@ export default function Hero() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-white text-sm font-medium hover:opacity-90 transition-opacity"
           >
             View Projects <ArrowRight size={15} />
           </Link>
           <Link
             href="/resume#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] text-sm font-medium text-[var(--foreground)] hover:border-[var(--accent)] transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-(--border) text-sm font-medium text-foreground hover:border-accent transition-colors"
           >
             Get in Touch <Mail size={15} />
           </Link>

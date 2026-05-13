@@ -16,7 +16,7 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
           <button
             key={img.src}
             onClick={() => setLightbox(img)}
-            className="relative aspect-video rounded-lg overflow-hidden bg-[var(--border)] hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="relative aspect-video rounded-lg overflow-hidden bg-(--border) hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-accent"
           >
             <Image src={img.src} alt={img.alt} fill className="object-cover" />
           </button>

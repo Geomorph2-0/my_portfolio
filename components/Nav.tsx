@@ -35,10 +35,10 @@ export default function Nav() {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between backdrop-blur-md bg-[var(--background)]/80 border-b border-[var(--border)]">
+      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between backdrop-blur-md bg-background/80 border-b border-(--border)">
         <Link
           href="/"
-          className="font-mono text-sm font-semibold tracking-tight text-[var(--accent)]"
+          className="font-mono text-sm font-semibold tracking-tight text-accent"
         >
           ~/portfolio
         </Link>
@@ -49,10 +49,10 @@ export default function Nav() {
             <Link
               key={href}
               href={href}
-              className={`text-sm transition-colors hover:text-[var(--accent)] ${
+              className={`text-sm transition-colors hover:text-accent ${
                 pathname === href
-                  ? "text-[var(--accent)] font-medium"
-                  : "text-[var(--muted)]"
+                  ? "text-accent font-medium"
+                  : "text-(--muted)"
               }`}
             >
               {label}
@@ -61,7 +61,7 @@ export default function Nav() {
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="p-1.5 rounded-md text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+            className="p-1.5 rounded-md text-(--muted) hover:text-foreground transition-colors"
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -72,14 +72,14 @@ export default function Nav() {
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="p-1.5 text-[var(--muted)]"
+            className="p-1.5 text-(--muted)"
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-            className="p-1.5 text-[var(--muted)]"
+            className="p-1.5 text-(--muted)"
           >
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -87,7 +87,7 @@ export default function Nav() {
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden bg-[var(--background)] border-b border-[var(--border)] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-background border-b border-(--border) px-6 py-4 flex flex-col gap-4">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -95,8 +95,8 @@ export default function Nav() {
               onClick={() => setMenuOpen(false)}
               className={`text-sm ${
                 pathname === href
-                  ? "text-[var(--accent)] font-medium"
-                  : "text-[var(--muted)]"
+                  ? "text-accent font-medium"
+                  : "text-(--muted)"
               }`}
             >
               {label}
