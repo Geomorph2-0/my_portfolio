@@ -2,25 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const skills = [
-  {
-    category: "Microcontrollers",
-    items: ["ESP32 (ESP-IDF & Arduino)", "STM32", "Arduino Uno/Mega/Nano"],
-  },
-  {
-    category: "Dev Environments",
-    items: ["VS Code + PlatformIO", "STM32Cube Suite", "ESP-IDF", "Vivado"],
-  },
-  {
-    category: "Hardware",
-    items: ["PCB Design (KiCad)", "Proteus Simulation", "Power Electronics"],
-  },
-  {
-    category: "Software",
-    items: ["C / C++", "Python", "PID Control", "Sensor Fusion"],
-  },
-];
+import { skillGroups as skills } from "@/lib/data";
 
 export default function About() {
   return (

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
@@ -16,18 +16,18 @@ export default function Nav() {
   const pathname = usePathname();
   const { theme, toggle } = useTheme();
   const [visible, setVisible] = useState(true);
-  const [lastY, setLastY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const lastY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      setVisible(currentY < lastY || currentY < 80);
-      setLastY(currentY);
+      setVisible(currentY < lastY.current || currentY < 80);
+      lastY.current = currentY;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastY]);
+  }, []);
 
   return (
     <header

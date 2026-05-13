@@ -1,64 +1,13 @@
 import Timeline from "@/components/Timeline";
 import { Download, GitFork, ExternalLink, Mail } from "lucide-react";
 import type { Metadata } from "next";
+import { experience, education, skillTags as skills } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Resume — Joseph Bolujo",
   description: "Experience, education, and skills of Joseph Kehinde Bolujo",
 };
 
-const experience = [
-  {
-    period: "Sep 2025 – Present",
-    role: "Vice President",
-    org: "Redeemer's University Technology Space",
-    description:
-      "Leading technical initiatives and community building at the university's technology hub, driving hardware and embedded systems projects.",
-  },
-  {
-    period: "Aug 2025 – Sep 2025",
-    role: "Network Intern",
-    org: "MTN Nigeria",
-    description:
-      "Assisted in monitoring network infrastructure and troubleshooting telecommunications hardware. Carried out site audits as part of maintenance and troubleshooting activities.",
-  },
-  {
-    period: "Apr 2025 – Jul 2025",
-    role: "Hardware Engineering Intern",
-    org: "Constantlink Technologies Limited",
-    description:
-      "Diagnosed and repaired complex PCB-level issues for smartphones (Samsung, Infinix, Oppo). Engineered solar power solutions including load calculation and panel/inverter installation. Maintained industrial-grade hardware including inverters, UPS systems, and printers.",
-  },
-];
-
-const education = [
-  {
-    period: "Jan 2021 – Oct 2026 (Expected)",
-    role: "B.Eng. Computer Engineering",
-    org: "Redeemer's University",
-    description:
-      "Key Coursework: Computer Architecture, Microprocessor Systems, Digital Logic Design, Embedded Systems, Control Systems, Cryptography Principles and Applications.",
-  },
-];
-
-const skills = [
-  "C / C++",
-  "Python",
-  "ESP32 (ESP-IDF)",
-  "STM32",
-  "Arduino",
-  "PlatformIO",
-  "STM32Cube Suite",
-  "KiCad",
-  "Proteus",
-  "Vivado (FPGA)",
-  "PID Control",
-  "Sensor Fusion",
-  "IoT Protocols",
-  "PCB Design",
-  "Power Electronics",
-  "UAV / Drone Systems",
-];
 
 export default function ResumePage() {
   return (
