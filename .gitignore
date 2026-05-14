@@ -44,6 +44,7 @@ next-env.d.ts
 .vscode/
 *.swp
 *~
+edit.txt
 
 # Claude Code local tooling
 .claude/

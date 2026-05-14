@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Wrench } from "lucide-react";
 
 const baseAnim = {
   initial: { opacity: 0, y: 20 },
@@ -18,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-mono text-sm text-accent mb-4 tracking-wide"
         >
-          Hardware Engineer · Embedded Systems Developer
+          Builder · Hardware Engineer · Embedded Systems
         </motion.p>
 
         <motion.h1
@@ -36,10 +36,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-lg md:text-xl text-(--muted) max-w-2xl leading-relaxed mb-10"
         >
-          Computer Engineering student specializing in embedded systems and UAV
-          architecture. I design flight controllers from the ground up —
-          bridging low-level firmware and complex hardware integration, building
-          world-class solutions on African soil.
+          The world is boring and full of monotony — or that&apos;s how I&apos;ve always
+          viewed it. When I build or think of building, I become entranced in the
+          infinite possibilities I can birth or help birth. I&apos;m on a journey of
+          obsession, innovation, and freedom.
         </motion.p>
 
         <motion.div
@@ -54,10 +54,10 @@ export default function Hero() {
             View Projects <ArrowRight size={15} />
           </Link>
           <Link
-            href="/resume#contact"
+            href="/building"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-(--border) text-sm font-medium text-foreground hover:border-accent transition-colors"
           >
-            Get in Touch <Mail size={15} />
+            What I&apos;m Building <Wrench size={15} />
           </Link>
         </motion.div>
       </div>
