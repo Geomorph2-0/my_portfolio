@@ -18,7 +18,7 @@ export default function ResumePage() {
             Resume
           </p>
           <h1 className="text-4xl font-bold tracking-tight">
-            Joseph Kehinde Bolujo
+            Joseph Bolujo
           </h1>
           <p className="text-(--muted) mt-1">
             Hardware Engineer · Embedded Systems Developer

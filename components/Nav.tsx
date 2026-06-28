@@ -41,7 +41,7 @@ export default function Nav() {
           href="/"
           className="font-mono text-sm font-semibold tracking-tight text-accent"
         >
-          ~/portfolio
+          @RBJ
         </Link>
 
         {/* Desktop links */}

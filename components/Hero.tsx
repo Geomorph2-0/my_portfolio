@@ -26,9 +26,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6"
         >
-          Joseph Kehinde,
-          <br />
-          <span className="text-accent">Bolujo.</span>
+          Joseph 
+          <span className="text-accent"> Bolujo.</span>
         </motion.h1>
 
         <motion.p
@@ -36,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-lg md:text-xl text-(--muted) max-w-2xl leading-relaxed mb-10"
         >
-          The world is boring and full of monotony — or that&apos;s how I&apos;ve always
+          The world is boring and full of monotony or that&apos;s how I&apos;ve always
           viewed it. When I build or think of building, I become entranced in the
           infinite possibilities I can birth or help birth. I&apos;m on a journey of
           obsession, innovation, and freedom.
