@@ -1,39 +1,53 @@
 ---
 title: "UAV Flight Controller"
-description: "A custom flight controller for UAV systems built on STM32, supporting brushed and brushless motors with PID control and sensor fusion."
+description: "A custom flight controller for quadcopter UAV systems built on STM32 and ESP32, supporting brushed and brushless motors with PID control and sensor fusion."
 tags: ["Firmware", "PCB", "System"]
-date: "2025-01-01"
+date: "2025-11-01"
+image: "/projects/uav-flight-controller/overview.jpg"
+gallery:
+  - src: "/projects/uav-flight-controller/overview.jpg"
+    alt: "Quadcopter frame with custom veroboard flight controller and brushless motors mounted"
+  - src: "/projects/uav-flight-controller/pdb.jpg"
+    alt: "Custom veroboard power distribution board with dual buck converters and XT60 connector"
+  - src: "/projects/uav-flight-controller/flight-controller-board.jpg"
+    alt: "Flight controller veroboard showing STM32, ESP32, MPU-9250 IMU, and supporting modules"
 featured: true
 ---
 
 ## Overview
 
-A custom-designed flight controller architected from the ground up to support both brushed and brushless motor configurations. This is my final year project at Redeemer's University, targeting a complete alternative to off-the-shelf flight controllers like Betaflight/Pixhawk.
+A custom-designed flight controller architected from the ground up to support both brushed and brushless motor configurations. This is my final year project at Redeemer's University, targeting a complete alternative to off-the-shelf flight controllers like Betaflight/Pixhawk. Conceptualized in April 2025, with active implementation beginning in November 2025.
 
 ## Problem
 
-Commercial flight controllers are black boxes — highly capable but opaque. The goal was to build something I fully understand at every layer of the stack: from the PCB traces and motor drivers to the PID tuning logic and telemetry dashboard.
+The price-to-performance ratio of commercial flight controllers is unfavourable for Nigerian education and research contexts. The goal was to lead development of a locally reproducible alternative targeting comparable performance at significantly lower cost.
+
+## Architecture
+
+The key trade-off was separating the real-time control layer (STM32) from the telemetry layer (ESP32) to meet performance constraints without compromising reliability — keeping flight-critical PID loops isolated from the overhead of wireless communication.
 
 ## Implementation
 
 **Firmware**
-- Developed in C using STM32Cube Suite and C++ via PlatformIO
+- Developed in C using STM32Cube Suite and C++ in Arduino.
 - PID control loops for roll, pitch, and yaw stabilization
 - Sensor fusion algorithms combining gyroscope and accelerometer data for real-time attitude estimation
 - Motor mixing algorithms for quadcopter geometry
+- Capable of attitude hold
 
 **Hardware**
-- Custom PCB designed in KiCad
-- STM32 microcontroller at the core
-- ESC signal output for brushless motor control (PWM / DSHOT)
+- Custom veroboard designed and iterated upon
+- STM32 microcontroller at the core of real time flight operations and ESP32 microcontroller for telemetry delivery and GCS (Ground Control Station) communication
+- ESC signal output for brushed and brushless motor control (PWM / DSHOT)
 - IMU integration (accelerometer + gyroscope)
+- Telemetry viewing via a web-based dashboard
+- Support for standard RC transmitter input (FlySky i6X and iA10B/iA6/iA6B receiver) via iBUS
 
 **Additional Features (In Progress)**
-- Telemetry viewing via a web-based dashboard
 - Remote control via Wi-Fi and cellular networks
-- Support for standard RC transmitter input
 - Waypoint mapping and autonomous flight modes
+- Position hold via GPS
 
 ## Outcome
 
-The controller is currently in active development and is being evaluated on a custom-built quadcopter frame alongside a custom Power Distribution Board (PDB). Performance is being benchmarked against industry-standard flight controllers.
+Validated core requirements in live testing: achieved over 10 minutes of stable flight and 1ms telemetry delivery to ground station. The next defined evaluation milestone is benchmarking against the Matek F411 WTE.

@@ -64,12 +64,16 @@ export const skillTags = skillGroups.flatMap((g) => g.items);
 
 export const experience = [
   {
-    period: "Sep 2025 – Present",
+    period: "Aug 2025 – Present",
     role: "Vice President",
     org: "Redeemer's University Technology Space",
     description: [
-      "Lead technical initiatives and community building at the university's technology hub",
-      "Spearheaded TechFest 5.0 — the community's annual event themed 'Create, Code and Culture'",
+      "Secured a partnership with NVIDIA to deliver a hands-on training and certification workshop, upskilling 100 students across the university",
+      "Organised a community visit to Flutterwave HQ, connecting members with industry experts for a live knowledge-sharing session",
+      "Hosted a two-week webinar series with alumni of the university, featuring a Senior Solutions Architect at AWS and a Postdoctoral Researcher at the University of Manchester",
+      "Planned and hosted the 5th Edition of TechFest, welcoming tech communities from 6 universities and securing sponsorship from Flutterwave, VFD Bank, Payaza, AfricaTech Academy, Bank78, and Digital Inclusion Initiative",
+      "Organised and hosted a Hackathon as a flagship event of TechFest, with Payaza as headline sponsor",
+      "Partnered with DII to secure 100 Coursera course licences for top-performing community members",
     ],
   },
   {
@@ -77,8 +81,10 @@ export const experience = [
     role: "Network Intern",
     org: "MTN Nigeria",
     description: [
-      "Monitored network infrastructure and troubleshot telecommunications hardware",
-      "Conducted site audits as part of routine maintenance and troubleshooting activities",
+      "Monitored network infrastructure and supported troubleshooting of telecommunications hardware",
+      "Performed daily power and HVAC checks across the switching center to maintain optimal operating conditions",
+      "Conducted and documented site audits at critical locations across the state, including the International Conference Centre, University of Ibadan",
+      "Attended to customer complaints onsite to help improve network performance in affected areas",
     ],
   },
   {
@@ -99,7 +105,7 @@ export const education = [
     role: "B.Eng. Computer Engineering",
     org: "Redeemer's University",
     description: [
-      "Key Coursework: Computer Architecture, Microprocessor Systems, Digital Logic Design, Embedded Systems, Control Systems, Cryptography Principles and Applications",
+      "Key Coursework: Computer Architecture, Microprocessor Systems, Digital Logic Design, Embedded Systems, Control Systems, Cryptography Principles and Applications, Technology Policy",
     ],
   },
 ];
