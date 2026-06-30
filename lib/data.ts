@@ -35,10 +35,26 @@ export const currentBuilds: CurrentBuild[] = [
     link: "https://github.com/Geomorph2-0/R-Tranzact",
   },
   {
+    name: "ps4-controller",
+    description:
+      "A professional-grade C library for DualShock 4 controller input — full HID report decoding (buttons, sticks, triggers, touchpad, IMU, battery), USB wired input via libusb, Bluetooth via BlueZ, with planned ESP32 adaptation for wireless embedded projects.",
+    status: "In Progress",
+    tags: ["C", "Bluetooth", "ESP32", "Embedded Systems"],
+    link: "https://github.com/Geomorph2-0/ps4-controller",
+  },
+  {
+    name: "Veroboard Planner",
+    description:
+      "A browser-based layout tool for stripboard and perfboard circuits. Plan designs visually before picking up a soldering iron — route wires, place components (resistors, caps, LEDs, ICs, connectors), drop batteries, and export as JSON. Built with React, TypeScript, and Zustand.",
+    status: "Stalled",
+    tags: ["React", "TypeScript", "Tools", "Hardware"],
+    link: "https://github.com/Geomorph2-0/veroboard_planner",
+  },
+  {
     name: "AI Navigation Agent",
     description:
       "An agent that helps users — developers and newcomers alike — navigate unfamiliar apps, websites, and tech stacks based on their specific use case. The problem: people get pointed at tools by friends or AI models and then get lost trying to actually use them. Still in the ideas and problem-definition stage.",
-    status: "Experimenting",
+    status: "Stalled",
     tags: ["AI", "Agents", "UX", "Developer Tools"],
   },
 ];
