@@ -1,0 +1,43 @@
+---
+title: "Custom F450 Quadcopter"
+description: "A purpose-built F450-class quadcopter designed as the real-world flight validation platform for the custom UAV flight controller project."
+tags: ["Hardware", "PCB", "System"]
+date: "2025-11-01"
+image: "/projects/custom-f450-quadcopter/overview.jpg"
+gallery:
+  - src: "/projects/custom-f450-quadcopter/top-view.jpg"
+    alt: "Angled top-down view of the F450 showing the electronics stack and wiring harness"
+  - src: "/projects/custom-f450-quadcopter/electronics.jpg"
+    alt: "Top-down view of the F450 with custom veroboard flight controller mounted"
+  - src: "/projects/custom-f450-quadcopter/early-build.jpg"
+    alt: "Early build stage — F450 frame with breadboard prototype electronics and motors"
+  - src: "/projects/custom-f450-quadcopter/flight-ready.jpg"
+    alt: "Flight-ready configuration with orange propellers and veroboard flight controller"
+featured: true
+---
+
+## Overview
+
+A custom F450-class quadcopter built as the purpose-built evaluation platform for the [UAV Flight Controller](/projects/uav-flight-controller) project. The goal was to move validation beyond the bench and into real-world flight conditions, giving the custom flight controller a controlled and well-understood airframe to be tested on.
+
+## Problem
+
+Bench testing a flight controller only goes so far. Real-world validation requires a physical platform with a known, stable load profile — one purpose-built for the test rather than adapted from an off-the-shelf build. No existing platform matched the specific requirements of the flight controller under development.
+
+## Design Decisions
+
+**Airframe**
+- F450-class frame chosen for its balance of stability, payload capacity, and availability of reference data
+- Brushless motors with matched propellers sized to the frame geometry
+
+**Power Distribution**
+- Identified a power-distribution gap unique to this platform's load profile: the flight controller, ESCs, and telemetry module had distinct voltage and current requirements that a standard PDB could not cleanly address
+- Designed and built a custom veroboard PDB with dual buck converters after evaluating component trade-offs, providing regulated 5V and 3.3V rails alongside the main battery feed
+
+**Integration**
+- Airframe acts as the physical host for the MB0.1 flight controller, IMU stack, RC receiver, and ESP32 telemetry module
+- Wiring harness designed for clean signal routing and minimal interference between power and control lines
+
+## Outcome
+
+The platform has supported over 10 minutes of stable flight during live testing of the flight controller. It remains the active evaluation environment as benchmarking against the Matek F411 WTE continues.
