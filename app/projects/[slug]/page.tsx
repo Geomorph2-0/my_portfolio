@@ -49,7 +49,7 @@ export default async function ProjectPage({
         {f.tags.map((tag) => (
           <span
             key={tag}
-            className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--border) text-(--muted)"
+            className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--border) text-accent"
           >
             {tag}
           </span>
@@ -83,11 +83,11 @@ export default async function ProjectPage({
 
       {f.image && (
         <div className="relative w-full h-72 rounded-xl overflow-hidden mb-12 bg-(--border)">
-          <Image src={f.image} alt={f.title} fill className="object-cover" />
+          <Image src={f.image} alt={f.title} fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover" />
         </div>
       )}
 
-      <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-accent prose-code:font-mono prose-pre:bg-(--card) prose-pre:border prose-pre:border-(--border)">
+      <article className="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-foreground/80 prose-li:text-foreground/80 prose-strong:text-foreground prose-a:text-accent prose-code:font-mono prose-pre:bg-(--card) prose-pre:border prose-pre:border-(--border)">
         <MDXRemote source={content} />
       </article>
 

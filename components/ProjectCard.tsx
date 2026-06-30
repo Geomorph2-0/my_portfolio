@@ -24,6 +24,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               src={f.image}
               alt={f.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -35,7 +36,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {f.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--border) text-(--muted)"
+              className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--border) text-accent"
             >
               {tag}
             </span>
@@ -47,7 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {f.title}
           </h3>
         </Link>
-        <p className="text-sm text-(--muted) leading-relaxed line-clamp-2 mb-4">
+        <p className="text-sm text-foreground/70 leading-relaxed line-clamp-2 mb-4">
           {f.description}
         </p>
 

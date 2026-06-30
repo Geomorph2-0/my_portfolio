@@ -13,9 +13,10 @@ export const currentBuilds: CurrentBuild[] = [
   {
     name: "MB0.1",
     description:
-      "A custom flight controller built from scratch — STM32 + ESP32 MCUs, ICM-20948 and MPU-9250 IMUs, MS-5611 barometer. This is the hardware the UAV project documentation is built around. Currently in active implementation.",
+      "A custom flight controller built from scratch on a dual-MCU, dual-IMU architecture with a barometer. This is the hardware the UAV project documentation is built around. Currently in active implementation.",
     status: "In Progress",
     tags: ["STM32", "ESP32", "C", "IMU", "Sensor Fusion", "PCB Design"],
+    link: "https://github.com/Geomorph2-0/fyp2",
   },
   {
     name: "Kubit",
@@ -28,9 +29,10 @@ export const currentBuilds: CurrentBuild[] = [
   {
     name: "RTranzact",
     description:
-      "An offline campus payment system enabling monetary transactions over local WiFi — no internet required. Built for the Interswitch Discovery Series at Redeemer's University. Interswitch extended an invitation to develop it further, but competing responsibilities made it impossible to continue. Whether it picks back up after graduation is still an open question.",
+      "An offline campus payment system enabling peer-to-peer transactions over local WiFi using RCoin — a custom digital currency. Built solo (team MB-Zero) for the Interswitch Discovery Series at Redeemer's University in September 2025. Placed second overall. Interswitch extended an invitation to develop it further. Stalled due to final year workload — resumes after graduation.",
     status: "Stalled",
     tags: ["Networking", "WiFi", "Fintech", "Systems Design"],
+    link: "https://github.com/Geomorph2-0/R-Tranzact",
   },
   {
     name: "AI Navigation Agent",
