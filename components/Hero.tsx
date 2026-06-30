@@ -18,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-mono text-sm text-accent mb-4 tracking-wide"
         >
-          Builder · Hardware Engineer · Embedded Systems
+          Builder · Hardware Engineer · Embedded Systems Developer
         </motion.p>
 
         <motion.h1

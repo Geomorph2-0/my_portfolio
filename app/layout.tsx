@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   },
   description:
     "Hardware Engineer and Embedded Systems Developer specializing in UAV architecture, firmware, and PCB design.",
+  icons: {
+    icon: "/icon.gif",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
