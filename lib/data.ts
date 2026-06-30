@@ -38,7 +38,7 @@ export const currentBuilds: CurrentBuild[] = [
     name: "ps4-controller",
     description:
       "A professional-grade C library for DualShock 4 controller input — full HID report decoding (buttons, sticks, triggers, touchpad, IMU, battery), USB wired input via libusb, Bluetooth via BlueZ, with planned ESP32 adaptation for wireless embedded projects.",
-    status: "In Progress",
+    status: "Planned",
     tags: ["C", "Bluetooth", "ESP32", "Embedded Systems"],
     link: "https://github.com/Geomorph2-0/ps4-controller",
   },
@@ -54,7 +54,7 @@ export const currentBuilds: CurrentBuild[] = [
     name: "AI Navigation Agent",
     description:
       "An agent that helps users — developers and newcomers alike — navigate unfamiliar apps, websites, and tech stacks based on their specific use case. The problem: people get pointed at tools by friends or AI models and then get lost trying to actually use them. Still in the ideas and problem-definition stage.",
-    status: "Stalled",
+    status: "Planned",
     tags: ["AI", "Agents", "UX", "Developer Tools"],
   },
 ];

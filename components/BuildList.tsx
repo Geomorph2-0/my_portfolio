@@ -107,7 +107,7 @@ export default function BuildList({ builds }: { builds: CurrentBuild[] }) {
       )}
 
       <p className="text-xs text-(--muted) mt-10 font-mono">
-        Stalled doesn&apos;t mean dead. Everything here is either waiting for time, resources, or the right moment.
+        Stalled doesn&apos;t mean dead. Everything here is either waiting for time or resources.
       </p>
     </div>
   );
